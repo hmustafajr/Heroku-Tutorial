@@ -1,0 +1,55 @@
+$sudo dnf install git-all
+
+If you are on a Debian based distro I recommend trying apt:
+$sudo apt install git-all
+
+
+/////////////////////////
+You will use the following to install from source. Note that the following libraries Git depends on:
+autotools
+curl
+zlib
+openssl
+expat
+libiconv
+
+For example, if you’re on a system that has dnf or apt-get
+you can use one of these commands to install the minimal dependencies for compiling and installing the Git binaries:
+
+$ sudo dnf install dh-autoreconf curl-devel expat-devel gettext-devel \
+  openssl-devel perl-devel zlib-devel
+$ sudo apt-get install dh-autoreconf libcurl4-gnutls-dev libexpat1-dev \
+  gettext libz-dev libssl-dev
+  
+In order to be able to add the documentation in various formats these additional dependencies are required.
+
+$ sudo dnf install asciidoc xmlto docbook2X
+$ sudo apt-get install asciidoc xmlto docbook2x
+
+If you’re using a Debian-based distribution you also need the install-info package:
+$ sudo apt-get install install-info
+
+If you’re using a RPM-based distro you also need the getopt package this is already installed on a Debian-based distro
+$ sudo dnf install getopt
+$ sudo apt-get install getopt
+
+Additionally if you’re using you a Fedora need to do this
+$ sudo ln -s /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi
+
+When you have all the necessary dependencies you can grab the latest tagged release tarball from several places.
+You can get this via the kernel.org site at https://www.kernel.org/pub/software/scm/git
+or the mirror on the GitHub website, at https://github.com/git/git/releases.
+It’s generally a little clearer what the latest version is on the GitHub page.
+
+$ tar -zxf git-2.0.0.tar.gz
+$ cd git-2.0.0
+$ make configure
+$ ./configure --prefix=/usr
+$ make all doc info
+$ sudo make install install-doc install-html install-info
+
+When this is complete you can also get Git via Git for updates
+
+$ git clone git://git.kernel.org/pub/scm/git/git.git
+
+You will still require setup
