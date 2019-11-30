@@ -1,0 +1,27 @@
+When the installation is complete you can use the heroku command from your terminal.
+
+On Windows you will use the heroku login command.
+
+$ heroku login
+heroku: Press any key to open up the browser to login or q to exit
+ ›   Warning: If browser does not open, visit
+ ›   https://cli-auth.heroku.com/auth/browser/***
+heroku: Waiting for login...
+Logging in... done
+Logged in as mufasa@helloworld.com
+
+This will open your web browser to the Heroku login page
+If your browser is already logged in to Heroku click the Log in button displayed on the page
+This will authenticate and is required for both the heroku and git commands to work correctly
+
+This will work for any version of Node grater than 8
+$node --version
+v11.12.13
+
+npm is installed with Node, if it is not installed I recommend a more recent version of Node:
+$ npm --version
+v12.13.14
+
+Now we will verify that git is installed
+$ git --version
+git version 12.13.14
