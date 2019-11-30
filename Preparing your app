@@ -1,0 +1,13 @@
+Here you'll prepare an application that is ready to deploy to Heroku
+
+I highly recommend using the Heroku-provided sample application
+If you are brave, take a look at this:
+
+https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
+
+To clone a local version of the sample application that is deployable execute the following command in term
+
+git clone https://github.com/heroku/node-js-getting-started.git
+cd node-js-getting-started
+
+Viola, you have a functioning Git repository that contains an application as well as a beautiful package.json
